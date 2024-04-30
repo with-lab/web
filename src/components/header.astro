@@ -1,5 +1,6 @@
 ---
-import { ArrowRight, ArrowUpRight, Menu } from './icons'
+import { ArrowRight, ArrowUpRight } from './icons'
+import { Sidebar } from './islands'
 import { Button } from './ui/button'
 ---
 
@@ -23,7 +24,7 @@ import { Button } from './ui/button'
             aria-expanded="false"
           >
             <span class="sr-only">Open main menu</span>
-            <Menu />
+            <Sidebar client:only />
           </button>
           <div class="z-20 hidden lg:flex">
             <nav class="flex gap-5 items-center">
