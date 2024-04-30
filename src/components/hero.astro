@@ -1,12 +1,11 @@
 ---
+import Container from './container.astro'
 import { ArrowRight } from './icons'
 import { Badge } from './ui/badge'
 import { Button } from './ui/button'
 ---
 
-<section
-  class="py-16 px-8 mx-auto w-full md:max-w-5xl flex flex-col items-center gap-6"
->
+<Container>
   <div class="mt-14">
     <article class="flex items-center justify-center mb-4">
       <Badge variant="outline"> Discover name company </Badge>
@@ -28,4 +27,4 @@ import { Button } from './ui/button'
   <figure class="mt-4">
     <img src="/nutritrack-hero-banner.webp" alt="Demo hero" />
   </figure>
-</section>
+</Container>
