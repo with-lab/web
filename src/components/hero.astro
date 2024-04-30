@@ -1,7 +1,31 @@
 ---
+import { ArrowRight } from './icons'
+import { Badge } from './ui/badge'
 import { Button } from './ui/button'
 ---
 
-<section class="py-16 px-8 mx-auto w-full md:max-w-3xl">
-  <Button>Anda pay</Button>
+<section
+  class="py-16 px-8 mx-auto w-full md:max-w-5xl flex flex-col items-center gap-6"
+>
+  <div class="mt-14">
+    <article class="flex items-center justify-center mb-4">
+      <Badge variant="outline"> Discover name company </Badge>
+    </article>
+    <article class="flex flex-col items-center">
+      <h1 class="text-6xl font-bold text-center">
+        The effortless way to plan your meals with the power of Notion.
+      </h1>
+      <p class="text-base my-6">
+        Streamline your nutrition journey and achieve your health goals with
+        ease.
+      </p>
+    </article>
+    <div class="flex items-center gap-6 justify-center">
+      <Button variant="ghost" size="lg"> Features </Button>
+      <Button size="lg"> Get Template <ArrowRight /> </Button>
+    </div>
+  </div>
+  <figure class="mt-4">
+    <img src="/nutritrack-hero-banner.webp" alt="Demo hero" />
+  </figure>
 </section>

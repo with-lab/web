@@ -1,0 +1,23 @@
+{
+  "pageTitle": "Bienvenido a Astro.",
+  "welcome": "Bienvenido to <0>Astro</0>",
+  "instructions": "Revisa la carpeta <0>src/pages</0> directory to get started.<1><2>Code Challenge:</2> Translate this page with your language of choice.",
+  "menu": {
+    "features": {
+      "title": "Características",
+      "body": "Learn how Astro works and explore the docs."
+    },
+    "feedback": {
+      "title": "Comentarios",
+      "body": "Supercharge your projects with new frameworks and libraries."
+    },
+    "faq": {
+      "title": "Dudas",
+      "body": "Explore a galaxy of community-built starter themes."
+    },
+    "contact": {
+      "title": "Contacto",
+      "body": "Come and say hi to our amazing Discord community. ❤️"
+    }
+  }
+}
