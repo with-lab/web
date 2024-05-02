@@ -1,4 +1,5 @@
 ---
+import Columns from './columns.astro'
 import Container from './container.astro'
 import { Badge } from './ui/badge'
 ---
@@ -8,5 +9,49 @@ import { Badge } from './ui/badge'
     <article class="flex items-center justify-center mb-4">
       <Badge variant="outline"> Features </Badge>
     </article>
+    <article class="flex flex-col items-center justify-center">
+      <h1 class="text-5xl font-bold text-center">
+        Simplify Your Nutrition Journey with NutriTrack
+      </h1>
+      <p class="text-base my-6 text-center">
+        Hey there! Welcome to NutriTrack, the ultimate nutrition meal planner
+        powered by Notion. We've got some awesome features lined up to make your
+        nutrition journey a piece of cake (pun intended). Check them out:
+      </p>
+    </article>
   </div>
+  <section class="mt-16 space-y-16">
+    <Columns>
+      <figure slot="column-one">
+        <img src="/features.png" />
+      </figure>
+      <div slot="column-two">
+        <h4 class="mb-6 text-4xl md:h3 font-semibold text-black">
+          Effortless Planning
+        </h4>
+        <p>
+          Say goodbye to meal planning stress! With NutriTrack, planning your
+          meals becomes a breeze. Our user-friendly Notion template lets you
+          create customized daily or weekly meal plans effortlessly. Enjoy a
+          balanced and nutritious diet without the hassle.
+        </p>
+      </div>
+    </Columns>
+    <Columns>
+      <div slot="column-one">
+        <h4 class="mb-6 text-4xl md:h3 font-semibold text-black">
+          Effortless Planning
+        </h4>
+        <p>
+          Say goodbye to meal planning stress! With NutriTrack, planning your
+          meals becomes a breeze. Our user-friendly Notion template lets you
+          create customized daily or weekly meal plans effortlessly. Enjoy a
+          balanced and nutritious diet without the hassle.
+        </p>
+      </div>
+      <figure slot="column-two">
+        <img src="/features.png" />
+      </figure>
+    </Columns>
+  </section>
 </Container>
