@@ -1,0 +1,59 @@
+---
+import Container from './container.astro'
+import { Badge } from './ui/badge'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from './ui/card'
+import { scientists } from '@/constants/data'
+---
+
+<Container>
+  <div class="mt-14">
+    <article class="flex items-center justify-center mb-4">
+      <Badge variant="outline"> Testimonials </Badge>
+    </article>
+    <article class="flex flex-col items-center justify-center">
+      <h2 class="text-5xl font-bold text-center">
+        This is what our customers have to say about this template
+      </h2>
+    </article>
+  </div>
+  <article
+    class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 xl:gap-x-8"
+  >
+    {
+      scientists.map((scient) => (
+        <Card className="group relative">
+          <CardHeader>
+            <CardTitle>{scient.name}</CardTitle>
+            <CardDescription>{scient.author}</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div class="grid w-full items-center gap-4">
+              <p>{scient.description}</p>
+            </div>
+          </CardContent>
+          <CardFooter className="flex items-center">
+            {[1, 2, 3, 4, 5].map((n) => (
+              <svg
+                viewBox="0 0 24 24"
+                class="h-6 mr-1 text-primary"
+                astro-icon="mdi:star"
+              >
+                <path
+                  fill="currentColor"
+                  d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.45 4.73L5.82 21 12 17.27z"
+                />
+              </svg>
+            ))}
+          </CardFooter>
+        </Card>
+      ))
+    }
+  </article>
+</Container>
